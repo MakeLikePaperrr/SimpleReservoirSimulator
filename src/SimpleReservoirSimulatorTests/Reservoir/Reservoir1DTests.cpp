@@ -2,12 +2,12 @@
 #include "../../SimpleReservoirSimulator/Reservoir/Reservoir1D.cpp"
 
 namespace Reservoir1DTests {
-	static TEST(ComputeGeometry, Executed_CellAndInterfacePosSet) {
+	TEST(ComputeGeometry, Executed_CellAndInterfacePosSet) {
 		// Arrange
 		int numberOfCells = 10;
 		double widthCellXDir = 1.0;
 		double lengthReservoir = numberOfCells * widthCellXDir;
-		Reservoir1D sut = Reservoir1D(numberOfCells, lengthReservoir, 1.0, 1.0, widthCellXDir);
+		Reservoir1D sut = Reservoir1D(numberOfCells, lengthReservoir, 1.0, 1.0, widthCellXDir, RockModel());
 
 		// Act
 		sut.ComputeGeometry();
@@ -24,9 +24,9 @@ namespace Reservoir1DTests {
 		EXPECT_DOUBLE_EQ(sut.PositionCellInterfaceXDir[numberOfCells], 10.0);
 	}
 
-	static TEST(Constructor, ObjectConstructed_MemberVariablesNotNull) {
+	TEST(Constructor, ObjectConstructed_MemberVariablesNotNull) {
 		// Arrange && Act
-		Reservoir1D sut = Reservoir1D();
+		Reservoir1D sut = Reservoir1D(RockModel());
 
 		// Assert
 		EXPECT_TRUE(sut.CellArea != NULL);
