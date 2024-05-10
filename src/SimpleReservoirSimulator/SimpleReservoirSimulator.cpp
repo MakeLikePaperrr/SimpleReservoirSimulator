@@ -23,11 +23,12 @@ int main()
     simulationCase.SolveSingleIteration();
 
     std::cout << "Pressure in reservoir, p = \n";
-    for (int i = 0; i < solver.Solution.size(); i++)
+    for (int i = 0; i < simulationCase.IncompressibleSinglePhase1DSolver.Solution.size(); i++)
     {
-        std::cout << solver.Solution[i] << "\n";
+        std::cout << simulationCase.IncompressibleSinglePhase1DSolver.Solution[i] << "\n";
     }
     std::cout << std::endl;
 
+    std::cout << "Press enter key to continue...";
     std::cin.get();
 }
