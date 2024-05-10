@@ -11,5 +11,8 @@ public:
 	Solver IncompressibleSinglePhase1DSolver;
 
 	SimulationCase(Reservoir1D reservoir, PhysicsModel physics, Solver solver);
+
+	void SetupBasicSimulationCase();
+	void SolveSingleIteration();
 };
 
