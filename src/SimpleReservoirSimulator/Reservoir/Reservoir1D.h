@@ -1,5 +1,7 @@
 #pragma once
 #include <vector>
+#include "../RockModel/RockModel.h"
+#include "../Discretizer/Discretizer.h"
 
 /// <summary>
 /// One dimensional reservoir class, suited for Finite Volume discretization. Unkowns are located at the cell centers.
@@ -35,13 +37,19 @@ public:
 
 	std::vector<double> PositionCellCenterXDir;
 	std::vector<double> PositionCellInterfaceXDir;
+	std::vector<double> ReservoirPermeability;
+	std::vector<double> ReservoirTransmissibility;
 
-	Reservoir1D();
-	Reservoir1D(int numberOfCellsXDir, double reservoirLengthXDir, double reservoirLengthYDir, double reservoirHeightZDir, double cellWidthXDir);
+	Reservoir1D(RockModel rockModel);
+	Reservoir1D(int numberOfCellsXDir, double reservoirLengthXDir, double reservoirLengthYDir, double reservoirHeightZDir, double cellWidthXDir, RockModel rockModel);
 
 	void ComputeGeometry();
+	void SetConstantReservoirPermeability();
+	void SetHeterogeneousReservoirPermeability(std::vector<double> permeability);
+	void DiscretizeReservoir();
 
 private:
 	void Init();
+	RockModel _rockModel;
 };
 
