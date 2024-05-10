@@ -11,6 +11,11 @@ RockModel::RockModel(double referencePorosity, double referencePressure, double 
 {
 }
 
+/// <summary>
+/// Compute porosity based on pressure
+/// </summary>
+/// <param name="pressure">Reservoir fluid pressure in Pa</param>
+/// <returns>Porosity (dimensionless)</returns>
 double RockModel::ComputePorosity(double pressure)
 {
 	assert(pressure > 0);

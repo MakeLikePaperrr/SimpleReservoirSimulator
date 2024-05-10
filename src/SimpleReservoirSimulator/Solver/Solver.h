@@ -6,6 +6,7 @@ class Solver
 {
 public:
 	Solver(int numberOfUnknowns);
+
 	/// <summary>
 	/// Contains the solution to Ax = b (A = connectivity matrix with transmissibility as coefficient, and b is source terms, while x = pressure)
 	/// </summary>

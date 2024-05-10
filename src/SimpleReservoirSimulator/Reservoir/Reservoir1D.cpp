@@ -31,11 +31,18 @@ void Reservoir1D::ComputeGeometry()
     }
 }
 
+/// <summary>
+/// Assign constant permeability to each cell based on RockModel.permeability
+/// </summary>
 void Reservoir1D::SetConstantReservoirPermeability()
 {
     std::fill(ReservoirPermeability.begin(), ReservoirPermeability.end(), _rockModel.permeability);
 }
 
+/// <summary>
+/// Assign (potential) non-constant permeability to each cell in the reservoir, could be read from file... (in the future)
+/// </summary>
+/// <param name="permeability"></param>
 void Reservoir1D::SetHeterogeneousReservoirPermeability(std::vector<double> permeability)
 {
     if (permeability.size() != ReservoirPermeability.size())
@@ -45,6 +52,9 @@ void Reservoir1D::SetHeterogeneousReservoirPermeability(std::vector<double> perm
     ReservoirPermeability.assign(permeability.begin(), permeability.end());
 }
 
+/// <summary>
+/// Discretize reservoir based on set permeability and geometry
+/// </summary>
 void Reservoir1D::DiscretizeReservoir()
 {
     Discretizer::ComputeTransmissibility(ReservoirPermeability, CellArea, CellWidthXDir, ReservoirTransmissibility);

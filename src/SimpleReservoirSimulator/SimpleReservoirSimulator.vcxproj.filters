@@ -39,6 +39,9 @@
     <ClCompile Include="Discretizer\Discretizer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SimulationCase\SimulationCase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -63,6 +66,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Discretizer\Discretizer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SimulationCase\SimulationCase.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
