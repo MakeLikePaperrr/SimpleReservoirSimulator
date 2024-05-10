@@ -129,14 +129,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="PhysicsModel\PhysicsModel.cpp" />
+    <ClCompile Include="PhysicsModel\Density\Density.cpp" />
     <ClCompile Include="Reservoir\Reservoir1D.cpp" />
+    <ClCompile Include="RockModel\RockModel.cpp" />
     <ClCompile Include="SimpleReservoirSimulator.cpp" />
+    <ClCompile Include="PhysicsModel\Viscosity\Viscosity.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="PhysicsModel\PhysicsModel.h" />
+    <ClInclude Include="PhysicsModel\Density\Density.h" />
     <ClInclude Include="Reservoir\Reservoir1D.h" />
+    <ClInclude Include="PhysicsModel\Viscosity\Viscosity.h" />
+    <ClInclude Include="RockModel\RockModel.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

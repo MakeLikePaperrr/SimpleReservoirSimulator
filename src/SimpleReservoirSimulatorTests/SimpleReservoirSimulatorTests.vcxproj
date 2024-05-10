@@ -101,7 +101,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
+    <ClCompile Include="PhysicsModel\Density\DensityTests.cpp" />
+    <ClCompile Include="PhysicsModel\Viscosity\ViscosityTests.cpp" />
     <ClCompile Include="Reservoir\Reservoir1DTests.cpp" />
+    <ClCompile Include="RockModel\RockModelTests.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
