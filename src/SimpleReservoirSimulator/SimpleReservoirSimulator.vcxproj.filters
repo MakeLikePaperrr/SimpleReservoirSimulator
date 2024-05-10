@@ -21,12 +21,36 @@
     <ClCompile Include="Reservoir\Reservoir1D.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="PhysicsModel\Density\Density.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PhysicsModel\Viscosity\Viscosity.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RockModel\RockModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PhysicsModel\PhysicsModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Reservoir\Reservoir1D.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PhysicsModel\Density\Density.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PhysicsModel\Viscosity\Viscosity.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RockModel\RockModel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PhysicsModel\PhysicsModel.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
