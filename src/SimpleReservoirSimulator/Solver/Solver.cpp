@@ -24,7 +24,13 @@ void Solver::SetupLinearSystem()
 /// <param name="cellNumber">Number of cell in which pressure has to be constant (means linear system has only a diagonal entry for this row/col)</param>
 void Solver::SetConstantPressureInCell(double constantPressure, int cellNumber)
 {
-    // Simplification 
+    if (cellNumber >= _numberOfUnknowns || cellNumber < 0)
+    {
+        std::stringstream ss;
+        ss << "Can't set pressure of cell to constant value since cell number : " << cellNumber << ", is outside of domain of size [0, " << _numberOfUnknowns << "]";
+        throw std::invalid_argument(ss.str());
+    }
+    // Simplification of actual boundary conditions (simply set pressure in cell constant)
     _linearSystem.insert(cellNumber, cellNumber) = 1.0;
     _rightHandSide[cellNumber] = constantPressure;
 }
@@ -47,6 +53,13 @@ void Solver::FillInnerDomainLinearSystem(double transmissibilityCoefficient)
 /// <param name="transmissibilityCoefficients">Vector of transmissibility coefficients</param>
 void Solver::FillInnerDomainLinearSystem(std::vector<double>& transmissibilityCoefficients)
 {
+    if (transmissibilityCoefficients.size() != _numberOfUnknowns + 1)
+    {
+        std::stringstream ss;
+        ss << "transmissibilityCoefficients has incorrect size : " << transmissibilityCoefficients.size() << ", instead of number of unknowns + 1 = " << _numberOfUnknowns + 1;
+        throw std::invalid_argument(ss.str());
+    }
+
     for (int i = 1; i < _numberOfUnknowns - 1; i++)
     {
         FillRowLinearSystem(transmissibilityCoefficients[i], transmissibilityCoefficients[i +1], i);
