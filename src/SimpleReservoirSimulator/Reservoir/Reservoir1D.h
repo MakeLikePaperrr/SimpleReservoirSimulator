@@ -1,6 +1,5 @@
 #pragma once
 #include <vector>
-#include <Eigen/Dense>
 
 /// <summary>
 /// One dimensional reservoir class, suited for Finite Volume discretization. Unkowns are located at the cell centers.
