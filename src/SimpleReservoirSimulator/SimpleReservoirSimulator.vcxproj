@@ -135,6 +135,7 @@
     <ClCompile Include="RockModel\RockModel.cpp" />
     <ClCompile Include="SimpleReservoirSimulator.cpp" />
     <ClCompile Include="PhysicsModel\Viscosity\Viscosity.cpp" />
+    <ClCompile Include="Solver\Solver.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -145,6 +146,7 @@
     <ClInclude Include="Reservoir\Reservoir1D.h" />
     <ClInclude Include="PhysicsModel\Viscosity\Viscosity.h" />
     <ClInclude Include="RockModel\RockModel.h" />
+    <ClInclude Include="Solver\Solver.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
