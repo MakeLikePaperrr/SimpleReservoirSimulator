@@ -3,7 +3,7 @@
 #include <vector>
 
 namespace DensityTests {
-	static TEST(ComputeDensity, Executed_CorrectDensity) {
+	TEST(ComputeDensity, Executed_CorrectDensity) {
 		// Arrange
 		double referencePressure = 1.0;
 		double referenceDensity = 2.0;
@@ -28,5 +28,23 @@ namespace DensityTests {
 		{
 			EXPECT_DOUBLE_EQ(actualDensity[i], expectedDensity[i]);
 		}
+	}
+
+	TEST(ComputeDensity, InvalidValueForPressure_AssertionThrown) {
+		// Arrange
+
+		Density sut = Density();
+
+		// Act && Assert
+		ASSERT_DEATH(sut.ComputeDensity(-1), "");
+	}
+
+	TEST(ComputeDensity, PressureIsNull_AssertionThrown) {
+		// Arrange
+
+		Density sut = Density();
+
+		// Act && Assert
+		ASSERT_DEATH(sut.ComputeDensity(NULL), "");
 	}
 }
