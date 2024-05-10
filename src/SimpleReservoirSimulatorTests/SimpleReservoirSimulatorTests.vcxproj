@@ -101,6 +101,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
+    <ClCompile Include="PhysicsModel\Density\DensityTests.cpp" />
+    <ClCompile Include="PhysicsModel\Viscosity\ViscosityTests.cpp" />
     <ClCompile Include="Reservoir\Reservoir1DTests.cpp" />
   </ItemGroup>
   <ItemGroup>
