@@ -5,7 +5,6 @@
 #include <fstream>
 #include <set>
 
-
 class InputFileReader
 {
 public:
@@ -20,7 +19,16 @@ public:
 	int TryParseKeyWordToInt(std::string keyWord);
 	bool ParseKeyWordToBool(std::string keyWord);
 
-private:
-	const std::set<std::string> _validKeywords = { "NumCellsXDir", "CellWidthXDir", "CellArea", "PressureLeft", "PressureRight", "Permeability", "PermeabilityFileName", "SaveOutput"};
+public:
+	static const std::string NumCellsXDir;
+	static const std::string CellWidthXDir;
+	static const std::string CellArea;
+	static const std::string PressureLeft;
+	static const std::string PressureRight;
+	static const std::string Permeability;
+	static const std::string PermeabilityFileName;
+	static const std::string SaveOutput;
+
+	static const std::set<std::string> ValidKeywords;
 };
 

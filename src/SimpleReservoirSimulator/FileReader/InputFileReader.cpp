@@ -29,8 +29,8 @@ void InputFileReader::ReadInputFile()
                 std::string value = line.substr(spacePos + 1);
 
                 // Only store keyword and value, if it's a valid keyword
-                auto it = _validKeywords.find(keyword);
-                if (it != _validKeywords.end())
+                auto it = ValidKeywords.find(keyword);
+                if (it != ValidKeywords.end())
                 {
                     KeywordValueMap[keyword] = value;
                 }
@@ -88,3 +88,15 @@ bool InputFileReader::ParseKeyWordToBool(std::string keyWord)
     }
     return lowerCase == "true" || lowerCase == "1" || lowerCase == "yes";
 }
+
+// Define all valid keywords:
+const std::string InputFileReader::NumCellsXDir = "NumCellsXDir";
+const std::string InputFileReader::CellWidthXDir = "CellWidthXDir";
+const std::string InputFileReader::CellArea = "CellArea";
+const std::string InputFileReader::PressureLeft = "PressureLeft";
+const std::string InputFileReader::PressureRight = "PressureRight";
+const std::string InputFileReader::Permeability = "Permeability";
+const std::string InputFileReader::PermeabilityFileName = "PermeabilityFileName";
+const std::string InputFileReader::SaveOutput = "SaveOutput";
+
+const std::set<std::string> InputFileReader::ValidKeywords = { NumCellsXDir, CellWidthXDir, CellArea, PressureLeft, PressureRight, Permeability, PermeabilityFileName, SaveOutput };
