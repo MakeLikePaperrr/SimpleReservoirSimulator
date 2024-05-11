@@ -3,7 +3,7 @@
 #include <vector>
 
 namespace ViscosityTests {
-	TEST(ComputeViscosity, Executed_CorrectDensity) {
+	TEST(ComputeViscosity, Executed_CorrectViscosity) {
 		// Arrange
 		double expectedViscosity = 1e-3;
 

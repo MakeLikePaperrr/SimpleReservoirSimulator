@@ -5,7 +5,7 @@
 namespace InputFileReaderTests {
 	TEST(ReadInputFile, ValidFile_FillsMapWithKeywordValuePairs) {
 		// Arrange
-		InputFileReader sut = InputFileReader("../../../../testFiles//ValidInputFile.txt");
+		InputFileReader sut = InputFileReader("../../../../testFiles/fileReaderTests/ValidInputFile.txt");
 		std::vector<std::string> expectedKeys = { "Permeability", "NumCellsXDir", "SaveOutput"};
 		std::vector<std::string> expectedValues = { "100", "10", "true" };
 
@@ -30,7 +30,7 @@ namespace InputFileReaderTests {
 
 	TEST(ReadInputFile, InValidFile_MapWithKeywordValuePairsIsEmpty) {
 		// Arrange
-		InputFileReader sut = InputFileReader("../../../../testFiles//InvalidInputFile.txt");
+		InputFileReader sut = InputFileReader("../../../../testFiles/fileReaderTests/InvalidInputFile.txt");
 
 		// Act
 		sut.ReadInputFile();

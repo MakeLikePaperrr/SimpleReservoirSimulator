@@ -4,7 +4,7 @@
 namespace PermeabilityFileReaderTests {
 	TEST(ReadInputFile, ValidFile_StoresPermeabilityValuesAsDouble) {
 		// Arrange
-		PermeabilityFileReader sut = PermeabilityFileReader("../../../../testFiles//ValidPermeabilityFile.txt");
+		PermeabilityFileReader sut = PermeabilityFileReader("../../../../testFiles/fileReaderTests/ValidPermeabilityFile.txt");
 		std::vector<double> expectedValues = { 101.2, 25.6, 16.2, 1006.9 };
 
 		// Act
@@ -24,7 +24,7 @@ namespace PermeabilityFileReaderTests {
 
 	TEST(ReadInputFile, InValidFile_PermeabilityVectorRemainsEmpty) {
 		// Arrange
-		PermeabilityFileReader sut = PermeabilityFileReader("../../../../testFiles//InvalidPermeabilityFile.txt");
+		PermeabilityFileReader sut = PermeabilityFileReader("../../../../testFiles/fileReaderTests/InvalidPermeabilityFile.txt");
 
 		// Act
 		sut.ReadDoubles();
