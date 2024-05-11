@@ -1,0 +1,4 @@
+//This is a valid input file
+#Permeability 100
+#NumCellsXDir 10
+#SaveOutput true
