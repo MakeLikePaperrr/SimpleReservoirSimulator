@@ -1,9 +1,10 @@
 #pragma once
 #include <string>
-#include <unordered_set>
 #include <unordered_map>
 #include <iostream>
 #include <fstream>
+#include <set>
+
 
 class InputFileReader
 {
@@ -15,5 +16,11 @@ public:
 	InputFileReader(std::string fileName);
 
 	void ReadInputFile();
+	double TryParseKeyWordToDouble(std::string keyWord);
+	int TryParseKeyWordToInt(std::string keyWord);
+	bool ParseKeyWordToBool(std::string keyWord);
+
+private:
+	const std::set<std::string> _validKeywords = { "NumCellsXDir", "CellWidthXDir", "CellArea", "PressureLeft", "PressureRight", "Permeability", "PermeabilityFileName", "SaveOutput"};
 };
 
