@@ -101,6 +101,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Discretizer\DiscretizerTests.cpp" />
+    <ClCompile Include="FileReader\InputFileReaderTests.cpp" />
+    <ClCompile Include="FileReader\PermeabilityFileReaderTests.cpp" />
     <ClCompile Include="pch.cpp" />
     <ClCompile Include="PhysicsModel\Density\DensityTests.cpp" />
     <ClCompile Include="PhysicsModel\Viscosity\ViscosityTests.cpp" />

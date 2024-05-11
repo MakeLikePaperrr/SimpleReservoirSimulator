@@ -1,0 +1,10 @@
+//InvalidFile
+%This is not a keyword
+%%This is not a keyword either
+
+% Not a keyword
+& Also not a keyword
+
+#this_is_not_a_valid_keyword no
+
+// End of the file

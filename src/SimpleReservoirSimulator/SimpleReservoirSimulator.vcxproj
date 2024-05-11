@@ -130,6 +130,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Discretizer\Discretizer.cpp" />
+    <ClCompile Include="FileReader\InputFileReader.cpp" />
+    <ClCompile Include="FileReader\PermeabilityFileReader.cpp" />
     <ClCompile Include="PhysicsModel\PhysicsModel.cpp" />
     <ClCompile Include="PhysicsModel\Density\Density.cpp" />
     <ClCompile Include="Reservoir\Reservoir1D.cpp" />
@@ -144,6 +146,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Discretizer\Discretizer.h" />
+    <ClInclude Include="FileReader\InputFileReader.h" />
+    <ClInclude Include="FileReader\PermeabilityFileReader.h" />
     <ClInclude Include="PhysicsModel\PhysicsModel.h" />
     <ClInclude Include="PhysicsModel\Density\Density.h" />
     <ClInclude Include="Reservoir\Reservoir1D.h" />

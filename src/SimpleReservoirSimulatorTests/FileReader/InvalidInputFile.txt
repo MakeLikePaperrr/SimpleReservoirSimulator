@@ -1,0 +1,9 @@
+//InvalidFile
+%This is not a keyword
+%%This is not a keyword either
+
+% Not a keyword
+& Also not a keyword
+
+
+// End of the file
